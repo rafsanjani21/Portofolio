@@ -22,7 +22,7 @@ function Skill() {
         <div className="text-6xl my-6">
           <GradientText>My Skills</GradientText>
         </div>
-        <LogoLoop
+        <LogoLoop className="bg-gray-400 bg-clip-padding border border-x-0 border-b-0 border-blue-500 bg-opacity-20 backdrop-blur-3xl backdrop-filter"
           logos={imageLogos}
           speed={90}
           direction="left"
@@ -34,7 +34,7 @@ function Skill() {
           // fadeOutColor="#0A0909"
           ariaLabel="Technology partners"
         />
-        <LogoLoop
+        <LogoLoop className="bg-gray-400 bg-clip-padding border border-x-0 border-t-0 border-blue-500 bg-opacity-20 backdrop-blur-3xl backdrop-filter"
           logos={imageLogos}
           speed={90}
           direction="right"

@@ -20,7 +20,7 @@ export default function About() {
 
           <div className="relative w-96 h-96">
             <img
-              src="/photo.jpeg"
+              src="/raff.jpeg"
               alt="Foto saya"
               className="absolute inset-0 w-full h-full object-cover rounded-xl"
             />

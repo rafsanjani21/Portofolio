@@ -86,14 +86,14 @@ export default function Projects() {
             src="/porto2.png"
             alt="buoy"
           />
-          <div className="text-center text-xl">Buoy U-TEWS</div>
+          <div className="text-center text-xl">Portofolio Vite+React</div>
           <div className="text-center text-sm mb-2 mt-1 max-h-24 overflow-y-auto px-2 scrollbar-hide">
-            Buoy U-TEWS is a real-time monitoring project, with the actual
-            device implemented on Sebesi Island, Lampung Province, Indonesia.
-            This web application is built using the PERN stack and retrieves
-            sensor data via MQTT. It features real-time monitoring of sea level,
-            wind speed, wind direction, solar panel status, and GPS location,
-            along with real-time chart visualization.
+            This portfolio website was built using Vite, React, and Tailwind CSS
+            to ensure a modern, responsive, and lightweight experience. Vite
+            provides fast build performance, React powers the interactive user
+            interface, and Tailwind CSS enables a consistent and elegant design.
+            The site serves as a personal showcase to highlight profile, skills,
+            and completed projects.
           </div>
           <div className=" absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-4xl mt-4 flex gap-2">
             <a
