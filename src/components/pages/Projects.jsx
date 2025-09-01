@@ -2,10 +2,11 @@ import GradientText from "../GradientText";
 import Card from "../Card";
 import { SiGithub } from "react-icons/si";
 import { FaGlobe } from "react-icons/fa";
+import { Element } from "react-scroll";
 
 export default function Projects() {
   return (
-    <div className="h-full">
+    <Element name="projects" className="h-full">
       <div className="text-6xl my-6">
         <GradientText>My Projects</GradientText>
       </div>
@@ -113,6 +114,6 @@ export default function Projects() {
           </div>
         </Card>
       </div>
-    </div>
+    </Element>
   );
 }

@@ -1,5 +1,6 @@
 import LogoLoop from "../LogoLoop";
 import GradientText from "../GradientText";
+import { Element } from "react-scroll";
 
 const imageLogos = [
   { src: "/html.png" },
@@ -15,11 +16,16 @@ const imageLogos = [
   { src: "/github.svg" },
 ];
 
+const imageName = [
+  { src: "/name.png" },
+  { src: "/logoo.png" },
+];
+
 function Skill() {
   return (
-    <div className="h-full relative overflow-hidden">
+    <Element name="skills" className="h-full relative overflow-hidden">
       <div className=" h-full">
-        <div className="text-6xl my-6">
+        <div id="skill" className="text-6xl my-6">
           <GradientText>My Skills</GradientText>
         </div>
         <LogoLoop className="bg-gray-400 bg-clip-padding border border-x-0 border-b-0 border-blue-500 bg-opacity-20 backdrop-blur-3xl backdrop-filter"
@@ -35,11 +41,11 @@ function Skill() {
           ariaLabel="Technology partners"
         />
         <LogoLoop className="bg-gray-400 bg-clip-padding border border-x-0 border-t-0 border-blue-500 bg-opacity-20 backdrop-blur-3xl backdrop-filter"
-          logos={imageLogos}
+          logos={imageName}
           speed={90}
           direction="right"
           logoHeight={100}
-          gap={80}
+          gap={10}
           pauseOnHover
           scaleOnHover
           // fadeOut
@@ -47,7 +53,7 @@ function Skill() {
           ariaLabel="Technology partners"
         />
       </div>
-    </div>
+    </Element>
   );
 }
 

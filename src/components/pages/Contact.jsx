@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import GradientText from "../GradientText";
+import { Element } from "react-scroll";
 
 export default function Contact() {
   const form = useRef();
@@ -28,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-12">
+    <Element name="contact" className="py-12">
       <div className="text-6xl my-6 text-center">
         <GradientText>Get In Touch</GradientText>
       </div>
@@ -87,6 +88,6 @@ export default function Contact() {
         <img src="/robot.png">
         </img>
       </div>
-    </section>
+    </Element>
   );
 }
