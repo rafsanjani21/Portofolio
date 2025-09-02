@@ -1,10 +1,10 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/pages/Hero";
-import About from "./components/pages/About";
-import Skills from "./components/pages/Skills";
-import Projects from "./components/pages/Projects";
-import Contact from "./components/pages/Contact";
-import Footer from "./components/pages/Footer";
+import Hero from "./components/section/Hero";
+import About from "./components/section/About";
+import Skills from "./components/section/Skills";
+import Projects from "./components/section/Projects";
+import Contact from "./components/section/Contact";
+import Footer from "./components/section/Footer";
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
       <Hero />
       <About />
       <Skills />
-      <Projects/>
-      <Contact/>
-      <Footer/>
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }

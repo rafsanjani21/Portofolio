@@ -1,72 +1,101 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkSize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkSize();
+    window.addEventListener("resize", checkSize);
+
+    return () => window.removeEventListener("resize", checkSize);
+  }, []);
+
+  const navLinks = [
+    { to: "hero", label: "Home" },
+    { to: "about", label: "About Me" },
+    { to: "skills", label: "Skills" },
+    { to: "projects", label: "Projects" },
+    { to: "contact", label: "Contact Me" },
+  ];
+
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 
-      bg-white/10 dark:bg-gray-900/10 
+    <nav
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 
+      bg-white/10  
       backdrop-blur-md border border-white/5 
-      rounded-full shadow-lg px-6 py-2 flex items-center space-x-6">
+      rounded-full shadow-lg px-6 py-2 flex items-center justify-between w-[90%] lg:w-auto"
+    >
+      {/* Logo */}
+      <div className="text-white font-bold lg:hidden">Rafsan</div>
 
-      <Link 
-        to="hero" 
-        smooth={true} 
-        duration={500} 
-        offset={-80}
-        className="px-4 py-2 rounded-full hover:bg-blue-500  text-white cursor-pointer"
-        activeClass="bg-blue-700"
-        spy={true}
+      <button
+        className="lg:hidden text-white"
+        onClick={() => setIsOpen(!isOpen)}
       >
-        Home
-      </Link>
+        {isOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
 
-      <Link 
-        to="about" 
-        smooth={true} 
-        duration={500} 
-        offset={-80}
-        className="px-4 py-2 rounded-full text-white hover:bg-blue-500 dark:text-white dark:hover:bg-gray-700 transition cursor-pointer"
-        activeClass="bg-blue-700"
-        spy={true}
-      >
-        About Me
-      </Link>
+      {/* Desktop menu */}
+      <div className="hidden lg:flex items-center space-x-6">
+        {navLinks.map((link) => (
+          <Link
+            key={link.to}
+            to={link.to}
+            smooth={true}
+            duration={500}
+            offset={
+              isMobile && link.to === "about"
+                ? -10 // khusus About Me di mobile
+                : link.to === "contact"
+                ? -160 // contact tetap khusus
+                : -80
+            }
+            className="px-4 py-2 rounded-full text-white hover:bg-blue-500 transition cursor-pointer"
+            activeClass="bg-blue-700"
+            spy={true}
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
 
-      <Link 
-        to="skills" 
-        smooth={true} 
-        duration={500} 
-        offset={-80}
-        className="px-4 py-2 rounded-full text-white hover:bg-blue-500 dark:text-white dark:hover:bg-gray-700 transition cursor-pointer"
-        activeClass="bg-blue-700"
-        spy={true}
-      >
-        Skills
-      </Link>
-
-      <Link 
-        to="projects" 
-        smooth={true} 
-        duration={500} 
-        offset={-80}
-        className="px-4 py-2 rounded-full text-white hover:bg-blue-500 dark:text-white dark:hover:bg-gray-700 transition cursor-pointer"
-        activeClass="bg-blue-700"
-        spy={true}
-      >
-        Projects
-      </Link>
-
-      <Link 
-        to="contact" 
-        smooth={true} 
-        duration={500} 
-        offset={-10}
-        className="px-4 py-2 rounded-full text-white hover:bg-blue-500 dark:text-white dark:hover:bg-gray-700 transition cursor-pointer"
-        activeClass="bg-blue-700"
-        spy={true}
-      >
-        Contact Me
-      </Link>
-
+      {/* Mobile menu dropdown */}
+      {isOpen && (
+        <div
+          className="absolute top-16 right-4 bg-black 
+    backdrop-blur-3xl border border-white/5  bg-opacity-50 rounded-lg shadow-lg 
+          flex flex-col items-start p-4 space-y-4 lg:hidden"
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              smooth={true}
+              duration={500}
+              offset={
+                isMobile && link.to === "about"
+                  ? -10 // khusus About Me di mobile
+                  : link.to === "contact"
+                  ? -160 // contact tetap khusus
+                  : -80
+              }
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-2 rounded-lg text-white hover:bg-blue-500 cursor-pointer"
+              activeClass="bg-blue-700"
+              spy={true}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }

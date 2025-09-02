@@ -1,4 +1,3 @@
-// import LightRays from "../LightRays";
 import Aurora from "../Aurora";
 import GradientText from "../GradientText";
 import TargetCursor from "../TargetCursor";
@@ -6,7 +5,7 @@ import { Element } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
-import TextType from "./../TextType";
+import TextType from "../TextType";
 import { Link } from "react-scroll";
 
 export default function Hero() {
@@ -22,7 +21,7 @@ export default function Hero() {
       className="relative flex flex-col justify-center items-center text-center h-screen overflow-hidden"
     >
       {/* Background */}
-      <div className="cursor">
+      <div className="cursor hidden lg:block">
         <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>
 
@@ -43,7 +42,7 @@ export default function Hero() {
           data-aos-anchor-placement="botom-bottom"
           data-aos-duration="10000"
           data-aos-delay="400"
-          className="text-5xl md:text-6xl font-bold py-3"
+          className="text-4xl md:text-6xl font-bold py-3"
         >
           <GradientText>
             Hello
@@ -59,7 +58,7 @@ export default function Hero() {
             Welcome To My Portofolio
           </GradientText>
         </h1>
-        <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-300">
+        <p className="mt-4 text-sm md:text-xl max-w-2xl mx-auto text-gray-300">
           I’m thrilled to have you here. Dive into the projects and ideas I’ve
           brought to life through the power of fullstack development. From
           backend logic to pixel-perfect UI — this is where code meets
