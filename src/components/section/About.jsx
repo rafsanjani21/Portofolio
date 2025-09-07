@@ -19,8 +19,8 @@ export default function About() {
           className="border p-6 lg:p-8 m-4 lg:m-8 rounded-lg border-blue-500 
                      flex flex-col lg:flex-row items-center gap-6 lg:gap-8  w-full"
         >
-          {/* Text */}
-          <div className="flex flex-col flex-1 text-center md:text-left">
+          {/* Group teks + tombol */}
+          <div className="flex flex-col flex-1 text-center md:text-left order-3 lg:order-2">
             <div
               data-aos="fade-up"
               data-aos-duration="0"
@@ -28,11 +28,12 @@ export default function About() {
             >
               <GradientText>Im Muhammad Rafsanjani</GradientText>
             </div>
+
             <div
               data-aos="fade-right"
               data-aos-duration="4000"
               data-aos-delay="500"
-              className="text-sm md:text-lg lg:text-2xl leading-relaxed text-center order-3 lg:order-2"
+              className="text-sm md:text-lg lg:text-2xl leading-relaxed text-center"
             >
               I am a Fullstack Web Developer focused on developing effective and
               efficient web applications. Involved in both frontend and backend,
@@ -40,9 +41,23 @@ export default function About() {
               needs. I continuously keep up with technological advancements to
               provide the best results in every project.
             </div>
+
+            {/* Tombol */}
+            <div className="mt-6 flex justify-center">
+              <a
+                href="https://drive.google.com/drive/folders/1eO0TPRcSa425vDt1Dt3u2v1RBJRSdEi2?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-white/10 dark:bg-gray-900/10 
+                 backdrop-blur-md border border-white/5 hover:bg-blue-800 rounded-lg 
+                 font-semibold transition-all duration-300"
+              >
+                Download CV
+              </a>
+            </div>
           </div>
 
-          {/* Image */}
+          {/* Gambar */}
           <div
             data-aos="zoom-in-up"
             data-aos-duration="0"

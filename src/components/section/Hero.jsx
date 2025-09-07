@@ -20,7 +20,7 @@ export default function Hero() {
       name="hero"
       className="relative flex flex-col justify-center items-center text-center h-screen overflow-hidden"
     >
-      {/* Background */}
+      {/* Cursor */}
       <div className="cursor hidden lg:block">
         <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       </div>
