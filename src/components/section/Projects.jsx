@@ -60,16 +60,15 @@ export default function Projects() {
   const visibleProjects = isDesktop
     ? showAll
       ? projects
-      : projects.slice(0, 3) // laptop default 3
-    : projects; // hp / tab semua tampil
+      : projects.slice(0, 3)
+    : projects;
 
   return (
     <Element name="projects" className="h-full overflow-hidden">
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="bottom-bottom"
-        data-aos-duration="100"
-        data-aos-delay="400"
+        data-aos-duration="0"
         className="text-4xl md:text-6xl my-6"
       >
         <GradientText>My Projects</GradientText>
@@ -78,7 +77,6 @@ export default function Projects() {
       <div
         data-aos="zoom-in-up"
         data-aos-duration="0"
-        data-aos-delay="700"
         className="flex gap-6 justify-start lg:justify-center overflow-x-auto scrollbar-thin lg:scrollbar-hide scrollbar-thumb-blue-500 scrollbar-track-transparent px-4 snap-x snap-mandatory lg:flex-wrap max-w-full overscroll-x-contain"
       >
         {visibleProjects.map((project, index) => (

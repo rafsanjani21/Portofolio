@@ -41,8 +41,7 @@ export default function Contact() {
     <Element 
     data-aos="fade-up"
         data-aos-anchor-placement="botom-bottom"
-        data-aos-duration="10000"
-        data-aos-delay="200"
+        data-aos-duration="0"
     className="contact">
       <div name="contact" className="text-4xl md:text-6xl my-6 text-center">
         <GradientText>Get In Touch</GradientText>

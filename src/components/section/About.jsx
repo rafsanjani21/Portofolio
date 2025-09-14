@@ -31,8 +31,6 @@ export default function About() {
 
             <div
               data-aos="fade-right"
-              data-aos-duration="4000"
-              data-aos-delay="500"
               className="text-sm md:text-lg lg:text-2xl leading-relaxed text-center"
             >
               I am a Fullstack Web Developer focused on developing effective and
@@ -61,7 +59,6 @@ export default function About() {
           <div
             data-aos="zoom-in-up"
             data-aos-duration="0"
-            data-aos-delay="700"
             className="relative w-48 h-48 md:w-60 md:h-60 lg:w-96 lg:h-96 order-2 lg:order-3"
           >
             <img
