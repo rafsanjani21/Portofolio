@@ -62,7 +62,7 @@ export default function About() {
             className="relative w-48 h-48 md:w-60 md:h-60 lg:w-96 lg:h-96 order-2 lg:order-3"
           >
             <img
-              src="/prof.jpeg"
+              src="/proff.jpg"
               alt="Foto saya"
               className="absolute inset-0 w-full h-full object-cover rounded-xl"
             />
