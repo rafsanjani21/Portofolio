@@ -1,15 +1,16 @@
 import GradientText from "../GradientText";
 import Card from "../Card";
 import { SiGithub } from "react-icons/si";
-import { FaGlobe } from "react-icons/fa";
+import { FaGlobe, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Element } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     AOS.init({
@@ -24,7 +25,6 @@ export default function Projects() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // daftar project
   const projects = [
     {
       title: "Portofolio HTML CSS",
@@ -56,15 +56,23 @@ export default function Projects() {
     },
   ];
 
-  // tentukan berapa yang tampil default
   const visibleProjects = isDesktop
     ? showAll
       ? projects
       : projects.slice(0, 3)
     : projects;
 
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -300 : 300,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <Element name="projects" className="h-full overflow-hidden">
+    <Element name="projects" className="h-full overflow-hidden relative">
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="bottom-bottom"
@@ -74,7 +82,9 @@ export default function Projects() {
         <GradientText>My Projects</GradientText>
       </div>
 
+      {/* Container project */}
       <div
+        ref={scrollRef}
         data-aos="zoom-in-up"
         data-aos-duration="0"
         className="flex gap-6 justify-start lg:justify-center overflow-x-auto scrollbar-thin lg:scrollbar-hide scrollbar-thumb-blue-500 scrollbar-track-transparent px-4 snap-x snap-mandatory lg:flex-wrap max-w-full overscroll-x-contain"
@@ -95,11 +105,7 @@ export default function Projects() {
               {project.desc}
             </div>
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-4xl mt-4 flex gap-2">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
                 <SiGithub className="cursor-pointer hover:scale-150 transition-transform" />
               </a>
               <a href={project.demo} target="_blank" rel="noopener noreferrer">
@@ -110,12 +116,28 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* tombol show more */}
+      {/* Panah navigasi hanya di mobile */}
+      <div className="lg:hidden flex justify-center gap-6 mt-4">
+        <button
+          onClick={() => scroll("left")}
+          className="bg-white/20 dark:bg-gray-900/20 p-3 rounded-md shadow-md hover:bg-blue-500 hover:text-white transition border border-blue-500"
+        >
+          <FaArrowLeft size={20} />
+        </button>
+        <button
+          onClick={() => scroll("right")}
+          className="bg-white/20 dark:bg-gray-900/20 p-3 rounded-md shadow-md hover:bg-blue-500 hover:text-white transition border border-blue-500"
+        >
+          <FaArrowRight size={20} />
+        </button>
+      </div>
+
+      {/* tombol show more (desktop) */}
       <div className="flex justify-center mt-6">
         <button
           onClick={() => setShowAll(!showAll)}
           className="px-6 py-3 bg-white/10 dark:bg-gray-900/10 
-    backdrop-blur-md border border-white/5 hover:bg-blue-800 rounded-lg font-semibold transition-all duration-300 lg:block hidden"
+    backdrop-blur-md border  hover:bg-blue-800 border-blue-500 rounded-lg font-semibold transition-all duration-300 lg:block hidden"
         >
           {showAll ? "Show Less" : "Show More"}
         </button>

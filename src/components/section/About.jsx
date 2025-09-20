@@ -47,8 +47,8 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 bg-white/10 dark:bg-gray-900/10 
-                 backdrop-blur-md border border-white/5 hover:bg-blue-800 rounded-lg 
-                 font-semibold transition-all duration-300"
+                 backdrop-blur-md  hover:bg-blue-800 rounded-lg 
+                 font-semibold transition-all duration-300 border border-blue-500"
               >
                 Download CV
               </a>
@@ -62,7 +62,7 @@ export default function About() {
             className="relative w-48 h-48 md:w-60 md:h-60 lg:w-96 lg:h-96 order-2 lg:order-3"
           >
             <img
-              src="/proff.jpg"
+              src="/san.jpeg"
               alt="Foto saya"
               className="absolute inset-0 w-full h-full object-cover rounded-xl"
             />

@@ -70,7 +70,7 @@ export default function Hero() {
           duration={500}
           offset={-80}
           className="mt-6 inline-block px-6 py-3 bg-white/10 dark:bg-gray-900/10 
-    backdrop-blur-md border border-white/5 hover:bg-blue-800 rounded-lg font-semibold transition-all duration-300"
+    backdrop-blur-md border border-blue-500 hover:bg-blue-800 rounded-lg font-semibold transition-all duration-300"
         >
           View My Work
         </Link>
