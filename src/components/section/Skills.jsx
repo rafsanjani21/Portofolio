@@ -18,6 +18,8 @@ const imageLogos = [
   { src: "/tail.svg" },
   { src: "/chatgpt.svg" },
   { src: "/github.svg" },
+  { src: "/Next.js.png" },
+  { src: "/Supabase.png" },
 ];
 
 const imageName = [{ src: "/name.png" }, { src: "/logoo.png" }];
