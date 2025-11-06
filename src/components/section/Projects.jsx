@@ -54,6 +54,13 @@ export default function Projects() {
       github: "https://github.com/rafsanjani21/BE_pumma",
       demo: "https://pummaubuoy.vercel.app/",
     },
+    {
+      title: "JobTracker",
+      img: "/jobtracker.png",
+      desc: "I created a website to track the jobs we have listed, using Next.js and Supabase. We can add, edit, and delete jobs.",
+      github: "https://github.com/rafsanjani21/JobTracker",
+      demo: "https://apllog.vercel.app/",
+    },
   ];
 
   const visibleProjects = isDesktop
@@ -105,7 +112,11 @@ export default function Projects() {
               {project.desc}
             </div>
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-4xl mt-4 flex gap-2">
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SiGithub className="cursor-pointer hover:scale-150 transition-transform" />
               </a>
               <a href={project.demo} target="_blank" rel="noopener noreferrer">
