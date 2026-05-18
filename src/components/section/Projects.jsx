@@ -61,6 +61,20 @@ export default function Projects() {
       github: "https://github.com/rafsanjani21/JobTracker",
       demo: "https://apllog.vercel.app/",
     },
+    {
+      title: "Philantropy",
+      img: "/filantropi.png",
+      desc: "A decentralized donation application (DApp) that integrates Next.js and the Polygon network for secure, transparent, and verified fundraising management.",
+      github: "https://github.com/rafsanjani21/filantropi",
+      demo: "https://filantropi.net/",
+    },
+    {
+      title: "GERAI APP",
+      img: "/gerai.jpg",
+      desc: "Cooperative outlet application with kotlin programming language, with google login features, registration form, account management.",
+      github: "https://github.com/rafsanjani21/koperasi",
+      demo: "",
+    },
   ];
 
   const visibleProjects = isDesktop
