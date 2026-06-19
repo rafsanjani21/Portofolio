@@ -75,6 +75,13 @@ export default function Projects() {
       github: "https://github.com/rafsanjani21/koperasi",
       demo: "",
     },
+    {
+      title: "GERAI WEB",
+      img: "/webgerai.png",
+      desc: "Cooperative outlet application with NEXTJS, with google login features, registration form, account management, and referral system.",
+      github: "https://github.com/rafsanjani21/webgerai",
+      demo: "https://app.gerai.org/",
+    },
   ];
 
   const visibleProjects = isDesktop
