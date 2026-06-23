@@ -55,7 +55,7 @@ export default function Hero() {
               className="ml-4"
             />
             <br />
-            Welcome To My Portofolio
+            Welcome To My Portfolio
           </GradientText>
         </h1>
         <p className="mt-4 text-sm md:text-xl max-w-2xl mx-auto text-gray-300">
