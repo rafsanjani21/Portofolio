@@ -82,6 +82,13 @@ export default function Projects() {
       github: "https://github.com/rafsanjani21/webgerai",
       demo: "https://app.gerai.org/",
     },
+    {
+      title: "CMS Kopi Lezat",
+      img: "/kopi.png",
+      desc: "Creating a company profile website using WordPress",
+      github: "https://github.com/rafsanjani21/",
+      demo: "http://kopi-lezat.rf.gd/",
+    },
   ];
 
   const visibleProjects = isDesktop
