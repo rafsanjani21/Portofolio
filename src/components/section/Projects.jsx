@@ -69,6 +69,13 @@ export default function Projects() {
       demo: "https://filantropi.net/",
     },
     {
+      title: "Dashboard Admin Philantropy",
+      img: "/fimin.png",
+      desc: "A philanthropy admin dashboard built with Next.js, featuring user verification, campaign management, and disbursement reporting.",
+      github: "https://github.com/rafsanjani21/filantropi-admin",
+      demo: "",
+    },
+    {
       title: "GERAI APP",
       img: "/gerai.jpg",
       desc: "Cooperative outlet application with kotlin programming language, with google login features, registration form, account management.",
@@ -85,9 +92,16 @@ export default function Projects() {
     {
       title: "CMS Kopi Lezat",
       img: "/kopi.png",
-      desc: "Creating a company profile website using WordPress",
+      desc: "Kopi Lezat is a WordPress-based coffee shop website designed to showcase brand identity, display full coffee and food menus, and allow online table reservations.",
       github: "https://github.com/rafsanjani21/",
       demo: "http://kopi-lezat.rf.gd/",
+    },
+    {
+      title: "AmanKu Insurance",
+      img: "/asuransi.png",
+      desc: "This project is a sample insurance company profile website built with Next.js, designed to demonstrate a trustworthy, user-friendly digital platform for policyholders and corporate clients.",
+      github: "https://github.com/rafsanjani21/insurance",
+      demo: "https://amanku-insurance.vercel.app/",
     },
   ];
 
