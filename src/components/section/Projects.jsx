@@ -103,6 +103,13 @@ export default function Projects() {
       github: "https://github.com/rafsanjani21/insurance",
       demo: "https://amanku-insurance.vercel.app/",
     },
+    {
+      title: "Tent Suki Restaurant",
+      img: "/tent.png",
+      desc: "This project is a concept and demo website for Tent Suki & Barbeque built with Next.js, designed to demonstrate a premium, user-friendly digital platform that showcases appetizing menus and streamlines table reservations for dining customers.",
+      github: "https://github.com/rafsanjani21/resto-bbq-demo",
+      demo: "https://tent-suki-demo.vercel.app/",
+    },
   ];
 
   const visibleProjects = isDesktop
