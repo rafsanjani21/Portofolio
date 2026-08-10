@@ -22,7 +22,7 @@ export default function Navbar() {
     { to: "about", label: "About Me" },
     { to: "skills", label: "Skills" },
     { to: "projects", label: "Projects" },
-    { to: "contact", label: "Contact Me" },
+    
   ];
 
   return (
