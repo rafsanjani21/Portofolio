@@ -110,6 +110,13 @@ export default function Projects() {
       github: "https://github.com/rafsanjani21/resto-bbq-demo",
       demo: "https://tent-suki-demo.vercel.app/",
     },
+    {
+      title: "Arena JKT",
+      img: "/arena.png",
+      desc: "This project is a concept and demo website for Arena JKT, a sports and entertainment venue, built with Next.js. It is designed to demonstrate a premium, user-friendly digital platform that showcases a wide range of sports and entertainment events and venue information for visitors.",
+      github: "https://github.com/rafsanjani21/arena",
+      demo: "https://arena-jkt.vercel.app/",
+    },
   ];
 
   const visibleProjects = isDesktop
